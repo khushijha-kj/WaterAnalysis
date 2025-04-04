@@ -7,7 +7,7 @@ CORS(app)
 
 @app.route("/")
 def home():
-    return jsonify({"status":"ok"}), 200
+    return jsonify({"status":"ok", "message": "hello world"}), 200
 
 @app.route("/predict", methods=["POST"])
 def predict():
