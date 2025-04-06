@@ -18,19 +18,19 @@ def predict():
         
         # Extract data from JSON and format it as a list
         parameters = [
-            input_data.get("param1"),
-            input_data.get("param2"),
-            input_data.get("param3"),
-            input_data.get("param4"),
-            input_data.get("param5"),
-            input_data.get("param6"),
-            input_data.get("param7"),
-            input_data.get("param8"),
-            input_data.get("param9"),
-            input_data.get("param10"),
-            input_data.get("param11"),
-            input_data.get("param12"),
-            input_data.get("param13"),
+            input_data.get("PH"),
+            input_data.get("EC"),
+            input_data.get("ORP"),
+            input_data.get("DO"),
+            input_data.get("TDS"),
+            input_data.get("TSS"),
+            input_data.get("TS"),
+            input_data.get("TOTAL_N"),
+            input_data.get("NH4_N"),
+            input_data.get("TOTAL_P"),
+            input_data.get("PO4_P"),
+            input_data.get("COD"),
+            input_data.get("BOD"),
         ]
 
         # Ensure all parameters are present
@@ -43,7 +43,7 @@ def predict():
         return jsonify({"prediction": result}), 200
         
     except Exception as e:
-        return jsonify({"error": "Error processing input data"}), 400
+        return jsonify({"error": "Error processing input data","e" : e}), 400
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
