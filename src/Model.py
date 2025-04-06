@@ -6,12 +6,12 @@ class Model:
     def __init__(self):
 
         # Load the trained SVM model
-        self.model_path = "/home/khushijha/Workspace/WaterAnalysisSupervised/src/models/svm_model.joblib"
+        self.model_path = "./models/svm_model.joblib"
         self.svm_model = joblib.load(self.model_path)
 
         # Load the scaler and label encoder used during training
-        self.scaler_path = "/home/khushijha/Workspace/WaterAnalysisSupervised/src/models/scaler.joblib"
-        self.label_encoder_path = "/home/khushijha/Workspace/WaterAnalysisSupervised/src/models/label_encoder.joblib"
+        self.scaler_path = "./models/scaler.joblib"
+        self.label_encoder_path = "./models/label_encoder.joblib"
         self.scaler = joblib.load(self.scaler_path)
         self.label_encoder = joblib.load(self.label_encoder_path)
 
